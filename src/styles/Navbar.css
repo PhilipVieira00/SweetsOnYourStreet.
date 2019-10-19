@@ -1,0 +1,43 @@
+
+
+.Navigation {
+  width: 100%;
+  text-align: center;
+  box-shadow: 1px 2px 4px grey;
+  background: rgba(2, 2, 2, 0.2);
+  height: 120px;
+  padding:0px;
+  margin:0px;
+}
+
+
+
+.menu {
+  list-style-type: none;
+  display: inline-block;
+  padding: 30px;
+  margin: 0px 0px;
+  
+}
+
+
+
+.logo {
+  text-align: center;
+  
+
+}
+
+body{
+  margin: 0px;
+ }
+
+
+
+
+
+
+
+
+
+
