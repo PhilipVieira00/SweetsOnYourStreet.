@@ -30,6 +30,7 @@ router.post("/create", (req, res) => {
 
 
 router.get("/user", authenticate, (req, res) => {
+    console.log(".../user");
     res.send(req.user);
 })
 

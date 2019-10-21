@@ -14,9 +14,7 @@ import "../styles/Header.css";
 
 function Header() {
   return (
-    <html>
-      
-    </html>
+    <div></div>
   );
 }
 

@@ -8,25 +8,37 @@
   height: 120px;
   padding:0px;
   margin:0px;
+  
+  
+ 
 }
 
+.logo{
 
-
-.menu {
-  list-style-type: none;
-  display: inline-block;
-  padding: 30px;
-  margin: 0px 0px;
+  float: left;
+  margin-top:25px;
   
 }
 
 
 
-.logo {
-  text-align: center;
-  
 
+
+#button {
+  float: right;
+  margin-top: 40px;
+  margin-right: 10px;
 }
+
+
+#col {
+  background-color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 150px;
+}
+
+
 
 body{
   margin: 0px;
