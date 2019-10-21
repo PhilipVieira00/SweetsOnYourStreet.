@@ -13,7 +13,7 @@ export default {
     logoutAccount: function (data) {
         return axios.delete("http://localhost:3333/user/logout", data);
     },
-    logoutAccount: function (data) {
+   AuthorizeAccount: function (data) {
         return axios.get("http://localhost:3333/user/user", data);
     },
 
