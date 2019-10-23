@@ -8,19 +8,23 @@
     "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.3.1",
-    "dotenv": "^8.1.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "google-map-react": "^1.1.5",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.15",
     "mongo": "^0.1.0",
-    "mongoose": "^5.7.5",
+    "mongoose": "^5.7.6",
     "nodemon": "^1.19.4",
+    "pusher": "^3.0.0",
+    "pusher-js": "^5.0.2",
     "react": "^16.10.2",
     "react-bootstrap": "^1.0.0-beta.14",
     "react-dom": "^16.10.2",
+    "react-native-geocoding": "^0.4.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
+    "react-toastify": "^5.4.0",
     "sequelize": "^5.19.6"
   },
   "scripts": {
@@ -47,7 +51,13 @@
     ]
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "gh-pages": "^2.1.1"
   },
-  "proxy": "http://localhost:3333"
+  "proxy": "http://localhost:3333",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

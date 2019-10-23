@@ -3,8 +3,8 @@ import GoogleMapReact from 'google-map-react';
 import axios from 'axios';
 import Pusher from 'pusher-js';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 require("dotenv").config();
+
 const mapStyles = {
   width: '100%',
   height: '100%'
@@ -41,10 +41,10 @@ class Map extends Component {
 
   componentDidMount() {
     var pusher = new Pusher({
-      appId: process.env.PUSHER_APP_ID,
-      key: process.env.PUSHER_KEY,
-      secret: process.env.PUSHER_SECRET,
-      cluster: process.env.PUSHER_CLUSTER
+      appId: process.env.REACT_APP_PUSHER_APP_ID,
+      key: process.env.REACT_APP_PUSHER_KEY,
+      secret: process.env.REACT_APP_PUSHER_SECRET,
+      cluster: process.env.REACT_APP_PUSHER_CLUSTER
     });
     this.presenceChannel = pusher.subscribe('presence-channel');
 
@@ -133,7 +133,7 @@ class Map extends Component {
           <div >
             <GoogleMapReact
               style={mapStyles}
-              bootstrapURLKeys={{ key: process.env.GOOGLEAPI }}
+              bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLEAPI }}
               center={this.state.center}
               zoom={14}
             >

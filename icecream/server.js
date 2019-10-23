@@ -5,26 +5,18 @@ require("dotenv").config();
 const app = express();
 
 const routes = require("./routes");
-
+console.log(process.env.REACT_APP_PUSHER_APP_ID);
 let pusher = new Pusher({
-  appId: process.env.PUSHER_APP_ID,
-  key: process.env.PUSHER_KEY,
-  secret: process.env.PUSHER_SECRET,
-  cluster: process.env.PUSHER_CLUSTER,
+  appId: process.env.REACT_APP_PUSHER_APP_ID,
+  key: process.env.REACT_APP_PUSHER_KEY,
+  secret: process.env.REACT_APP_PUSHER_SECRET,
+  cluster: process.env.REACT_APP_PUSHER_CLUSTER,
   encrypted: true
 });
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-// to Allow CORS
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header(
-        'Access-Control-Allow-Headers',
-        'Origin, X-Requested-With, Content-Type, Accept'
-    );
-    next();
-});
+
 
 app.post('/pusher/auth', (req, res) => {
   let socketId = req.body.socket_id;
