@@ -16,19 +16,23 @@ let pusher = new Pusher({
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(function (req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
 
-
-app.post('/pusher/auth', (req, res) => {
-  let socketId = req.body.socket_id;
-  let channel = req.body.channel_name;
-  random_string = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
-  let presenceData = {
-      user_id: random_string,
-      user_info: {
-          username: '@' + random_string,
-      }
+app.post('/pusher/auth', function(req, res) {
+  var socketId = req.body.socket_id;
+  var channel = req.body.channel_name;
+  var presenceData = {
+    user_id: 'unique_user_id',
+    user_info: {
+      name: 'Mr Channels',
+      twitter_id: '@pusher'
+    }
   };
-  let auth = pusher.authenticate(socketId, channel, presenceData);
+  var auth = pusher.authenticate(socketId, channel, presenceData);
   res.send(auth);
 });
 

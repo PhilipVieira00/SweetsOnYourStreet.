@@ -17,6 +17,6 @@ app.use(function (req, res, next) {
 app.use("/user", userController);
 
 
-app.listen(3333, () => {
+app.listen(3000, () => {
     console.log("Server is running on port 3333");
 });
