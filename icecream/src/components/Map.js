@@ -102,7 +102,7 @@ class Map extends Component {
           newState.locations[`${prevState.current_user}`] = location;
           return newState;
         });
-        axios.post("http://localhost:3128/update-location", {
+        axios.post("http://localhost:3000/update-location", {
           username: this.state.current_user,
           location: location
         }).then(res => {

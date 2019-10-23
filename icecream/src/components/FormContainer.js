@@ -11,7 +11,7 @@ class FormContainer extends Component {
   constructor(props) {
     super(props);
 
-    state = {
+    this.state = {
       newProduct: {
         product: '',
         quantity: 0,
@@ -24,7 +24,7 @@ class FormContainer extends Component {
       inStockOptions: ['Yes', 'No'], //or a ternary expression?
    hasAllergenOptions: ['Yes', 'No'], //or a ternary expression?
     }
-    this.state = initialState
+    this.state = this.state;
     this.handleChange = this.handleChange.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.handleClearForm = this.handleClearForm.bind(this);
